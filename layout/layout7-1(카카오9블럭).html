@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+  <style>
+    /* reset, common */
+    *{margin: 0; padding: 0;}
+    li{list-style: none;}
+    body{font-family: 'Nanum Gothic', sans-serif;}
+    .center{position: relative; width: 960px; margin: 0 auto;}
+
+    header{height: 200px; text-align: center; line-height: 200px;}
+    ul{overflow: hidden; margin: 0 -15px;}
+    ul li{float: left; width: 33.33%; height: 350px; margin-bottom:30px;}
+    ul li .wrap{
+      position: relative; width: 300px; height: 100%;
+      padding: 20px; color:#fff; overflow: hidden;
+      box-sizing: border-box; margin: auto;
+    }
+    ul li:nth-child(1) .wrap{background: #39516d;}
+    ul li:nth-child(2) .wrap{background: #fec6c7;}
+    ul li:nth-child(3) .wrap{background: #a98342;}
+    ul li:nth-child(4) .wrap{background: #f18988;}
+    ul li:nth-child(6) .wrap{background: #ffd200;}
+    ul li:nth-child(7) .wrap{background: #367250;}
+    ul li:nth-child(8) .wrap{background: #94ccd9;}
+    ul li:nth-child(9) .wrap{background: #636466;}
+    .wrap h2{position: relative; font-weight: normal; font-size: 46px; z-index: 1;}
+    .wrap span{font-size: 24px; font-weight: bold; opacity: 0.5;}
+    .wrap img{position: absolute; bottom:0; left:0;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1><img src="img/kakaofriends-logo-big.png" alt="kakaofriends"></h1>
+  </header>
+  <section class="center">
+    <!-- ul>li>div[class="wrap"]>img+h2+span     -->
+    <ul>
+      <li>
+        <div class="wrap">
+          <img src="img/friends_ryan.jpg" alt="">
+          <h2>라이언</h2>
+          <span>Ryan</span>
+        </div>
+      </li>
+      <li>
+        <div class="wrap">
+          <img src="img/friends_apeach.jpg" alt="">
+          <h2>어피치</h2>
+          <span>Apeach</span>
+        </div>
+      </li>
+      <li>
+        <div class="wrap">
+          <img src="img/friends_frodo.jpg" alt="">
+          <h2>프로도</h2>
+          <span>Frodo</span>
+        </div>
+      </li>
+      <li>
+        <div class="wrap">
+          <img src="img/friends_neo.jpg" alt="">
+          <h2>네오</h2>
+          <span>Neo</span>
+        </div>
+      </li>
+      <li></li>
+      <li>
+        <div class="wrap">
+          <img src="img/friends_muzi.jpg" alt="">
+          <h2>무지</h2>
+          <span>Muzi</span>
+        </div>
+      </li>
+      <li>
+        <div class="wrap">
+          <img src="img/friends_con.jpg" alt="">
+          <h2>콘</h2>
+          <span>Con</span>
+        </div>
+      </li>
+      <li>
+        <div class="wrap">
+          <img src="img/friends_tube.jpg" alt="">
+          <h2>튜브</h2>
+          <span>Tube</span>
+        </div>
+      </li>
+      <li>
+        <div class="wrap">
+          <img src="img/friends_jayg.jpg" alt="">
+          <h2>제이지</h2>
+          <span>Jay-G</span>
+        </div>
+      </li>
+    </ul>
+  </section>
+</body>
+</html>

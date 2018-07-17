@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" />
+  <style>
+  /* reset, common */
+  *{margin: 0; padding: 0;}
+  li{list-style: none;}
+  a{text-decoration: none; color:#000;}
+  button{border:0;}
+  body{font-family: 'Oswald', sans-serif;}
+  .center{position: relative; width: 960px; margin: 0 auto;}
+  .skip{font-size: 0; text-indent: -9999px; position: absolute; left:-9999px;}
+
+  /* header */
+  header{background: #f3f2ec; }
+  header .center{height: 200px;}
+  header h1{padding-top: 50px;}
+  header ul{position: absolute; bottom:50px; right: 0;}
+  header ul li{float: left; margin-left: 60px;}
+  header ul li a{font-size: 14px; text-transform: uppercase;}
+  header ul li a:hover{color:#06704b;}
+
+  /* section */
+  .slide{position: relative;}
+  .slide .slide-list{height: 470px; overflow: hidden;}
+  .slide .slide-list li{float: left; width: 100%; height: 100%;
+    background-position: center; background-repeat: no-repeat;
+  }
+  .slide .slide-list li:nth-child(1){background-image: url(img/slide1.jpg);}
+  .slide .slide-list li:nth-child(2){background-image: url(img/slide1.jpg);}
+  .slide .slide-list li:nth-child(3){background-image: url(img/slide1.jpg);}
+  .slide .pagination{
+    position: absolute; left:50%; transform: translateX(-50%);
+    bottom:14px;
+  }
+  .slide .pagination li{float: left; padding: 0 8px;}
+  .slide .pagination li a{display: block; width: 16px; height: 16px;
+    border-radius: 50%; border: 3px solid #006633; box-sizing: border-box;
+    background: #fff;
+  } 
+  .slide .pagination li.active a{
+    background: #006633; border:0;
+  }
+
+  .product-list{margin: 30px auto; padding-bottom: 100px;}
+  .product-list::after{content:''; display: block; overflow: hidden; clear: both;}
+  .product-list ul{margin:0 -15px; background: pink;}
+  .product-list ul li{float: left; margin-bottom: 30px; width: 33.33%; text-align: center;}
+  /* .product-list ul li{float: left; width: 300px; margin-right: 30px; margin-bottom: 30px; text-align: center;} */
+  .product-list ul li:nth-child(3n){margin-right: 0;}
+  .product-list ul li .wrap{
+    /* block이면 가운데정렬 안되므로 인라인으로 성질변경 */
+    display: inline-block;
+    position: relative; width: 300px; height: 600px;
+    background: #fff; box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  }
+  .product-list ul li:nth-child(even) .wrap{background: #003a19;}
+  .product-list ul li .wrap img{width: 100%;}
+  .product-list ul li .wrap dl{padding-top: 40px;}
+  .product-list ul li:nth-child(even) .wrap dl{color:#fff;}
+  .product-list ul li .wrap dl dt{padding-bottom: 40px;}
+  .product-list ul li .wrap dl dt b{font-size: 21px; display: block;}
+  .product-list ul li .wrap dl dt span{font-size: 18px;}
+  .product-list ul li .wrap dl dd{padding: 0 30px; font-size: 14px; text-align: left;}
+  .product-list ul li .wrap button{
+    position: absolute; left:50%; transform: translateX(-50%);
+    bottom:30px; width: 160px; height: 50px; background: #006633; font-size: 16px;
+    font-weight: bold; color:#fff;
+  }
+  .product-list ul li:nth-child(even) .wrap button{background: #fff; color:#006633;}
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="center">
+      <h1><img src="img/starbucks-logo.png" alt="스타벅스 로고"></h1>
+      <ul>
+        <!-- li*5>a[href=#] -->
+        <li><a href="#">coffee</a></li>
+        <li><a href="#">menu</a></li>
+        <li><a href="#">responsibility</a></li>
+        <li><a href="#">my starbucks rewards</a></li>
+        <li><a href="#">what's new</a></li>
+      </ul>
+    </div>
+  </header>
+  <section>
+    <article class="slide">
+      <ul class="slide-list">
+        <li><a href="#"><span class="skip">show your flavor - 뉴그린티 프라푸치노, ...</span></a></li>
+        <li><a href="#"><span class="skip">두번째슬라이드 내용작성</span></a></li>
+        <li><a href="#"><span class="skip">세번째슬라이드 내용작성</span></a></li>
+      </ul>
+      <!-- ul>li*3>a[href=#]>span[class=skip] -->
+      <ul class="pagination">
+        <li class="active"><a href="#"><span class="skip">1</span></a></li>
+        <li><a href="#"><span class="skip">2</span></a></li>
+        <li><a href="#"><span class="skip">3</span></a></li>
+      </ul>
+    </article>
+
+    <article class="product-list center">
+      <!-- ul>li>div[class=wrap]>img+(dl>dt(b+span)+dd)+button -->
+      <ul>
+        <li>
+          <div class="wrap">
+            <img src="img/coffee.jpg" alt="">
+            <dl>
+              <dt>
+                <b>나이트로쇼콜라</b>
+                <span>Nitro Chocholat</span>
+              </dt>
+              <dd>초콜릿과 견과류의 풍미, 초콜릿 파우더 토핑, 풀 바디값의 새로운 나이트로 콜드 브루</dd>
+            </dl>
+            <button>나만의 음료로 등록</button>
+          </div>
+        </li>
+        <li>
+          <div class="wrap">
+            <img src="img/coffee.jpg" alt="">
+            <dl>
+              <dt>
+                <b>나이트로쇼콜라</b>
+                <span>Nitro Chocholat</span>
+              </dt>
+              <dd>초콜릿과 견과류의 풍미, 초콜릿 파우더 토핑, 풀 바디값의 새로운 나이트로 콜드 브루</dd>
+            </dl>
+            <button>나만의 음료로 등록</button>
+          </div>
+        </li>
+        <li>
+          <div class="wrap">
+            <img src="img/coffee.jpg" alt="">
+            <dl>
+              <dt>
+                <b>나이트로쇼콜라</b>
+                <span>Nitro Chocholat</span>
+              </dt>
+              <dd>초콜릿과 견과류의 풍미, 초콜릿 파우더 토핑, 풀 바디값의 새로운 나이트로 콜드 브루</dd>
+            </dl>
+            <button>나만의 음료로 등록</button>
+          </div>
+        </li>
+      </ul>
+    </article>
+  </section>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

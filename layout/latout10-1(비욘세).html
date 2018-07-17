@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <style>
+  *{margin: 0; padding: 0;}
+  .skip{font-size: 0; text-indent: -9999px; position: absolute; left:-9999px;}
+  .center{position: relative; width: 960px; margin: 0 auto;}
+  button{border: 0; background: none;}
+  body{font-family: 'Nanum Gothic', sans-serif;}
+  li{list-style: none;}
+
+  header{background: #000; height: 100px; text-align: center;}
+  header .center{width: 1200px;}
+  header h1{padding-top: 20px;}
+  header .btn-menu{position: absolute; left:30px; top:35px;}
+  header .btn-search{position: absolute; right:30px; top:35px;}
+  header i{color:#fff; font-size: 30px;}
+
+  .gallery{padding: 0 10px;}
+  .gallery h2{font-size: 48px; line-height: 100px; text-align: center;}
+  .gallery .big-img{
+    height: 820px; border: 5px solid #000; box-sizing: border-box;
+    background: #ccc; margin-bottom: 20px;
+  }
+  .gallery .big-img img{width: 100%;}
+
+  .gallery .img-list{position: relative; margin-bottom: 50px;}
+  .gallery .img-list ul{overflow: hidden; margin: 0 -10px;}
+  .gallery .img-list ul li{float: left; width: 25%; text-align: center;}
+  .gallery .img-list ul li a{display: inline-block; width: 220px; height: 260px;background: #ccc;}
+  .gallery .img-list ul li img{width: 220px; height: 260px; box-sizing: border-box;}
+  .gallery .img-list ul li.active img{border: 5px solid #000;}
+
+  .gallery .img-list button{
+    position: absolute; top:50%; transform: translateY(-50%);
+    cursor: pointer; outline: none;
+    border-top: 21px solid transparent;
+    border-bottom: 21px solid transparent;
+  }
+  #prev{left:-40px; border-right: 30px solid #000;}
+  #next{right:-40px; border-left: 30px solid #000;}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="center">
+      <h1><img src="img/beyonce-logo.jpg" alt="beyonce"></h1>
+      <button class="btn-menu"><i class="fas fa-bars"></i><span class="skip">메뉴</span></button>
+      <button class="btn-search"><i class="fas fa-search"></i><span class="skip">검색</span></button>
+    </div>
+  </header>
+  <section class="center">
+    <article class="gallery">
+      <h2>LEMONADE</h2>
+      <div class="big-img">
+        <img src="img/lemonade4-L.jpg" alt="lemonade4">
+      </div>
+      <div class="img-list">
+        <!-- ul>li*4>a[href=#]>img[src=img/lemonade$-S.jpg] -->
+        <ul>
+          <li><a href="#"><img src="img/lemonade1-S.jpg" alt="lemonade1"></a></li>
+          <li><a href="#"><img src="img/lemonade2-S.jpg" alt="lemonade2"></a></li>
+          <li><a href="#"><img src="img/lemonade3-S.jpg" alt="lemonade3"></a></li>
+          <li class="active"><a href="#"><img src="img/lemonade4-S.jpg" alt="lemonade4"></a></li>
+        </ul>
+        <button id="prev"><span class="skip">이전</span></button>
+        <button id="next"><span class="skip">다음</span></button>
+      </div>
+    </article>
+  </section>
+
+</body>
+</html>

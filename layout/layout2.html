@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <style>
+    *{margin: 0; padding: 0;}
+    .skip{font-size: 0; text-indent: -9999px; position: absolute; left:-9999px;}
+    .center{position: relative; width: 960px; margin: 0 auto;}
+    button{border: 0; background: none;}
+
+    header{background: #000; height: 100px; text-align: center;}
+    header h1{padding-top: 20px;}
+    header .btn-menu{position: absolute; left:30px; top:35px;}
+    header .btn-search{position: absolute; right:30px; top:35px;}
+    header i{color:#fff; font-size: 30px;}
+
+    section.center{margin: 100px auto;}
+    /* .photo-list .row::after{content: ''; display: block; clear: both; overflow: hidden;} */
+    .photo-list .row img{float: left;}
+    .photo-list .row img:nth-child(1){margin-right: 30px;}
+    .photo-list .col{float: left; width: 300px; margin-right: 30px;}
+    .photo-list .col:last-child{margin-right: 0;}
+    .photo-list .col img{margin: 30px 0 0 0; vertical-align: top;}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="center">
+      <h1><img src="img/beyonce-logo.jpg" alt="beyonce"></h1>
+      <button class="btn-menu"><i class="fas fa-bars"></i><span class="skip">메뉴</span></button>
+      <button class="btn-search"><i class="fas fa-search"></i><span class="skip">검색</span></button>
+    </div>
+  </header>
+  <section class="center">
+    <article class="photo-list">
+      <div class="row">
+        <img src="img/beyonce1.jpg" alt="beyonce1">
+        <img src="img/beyonce2.jpg" alt="beyonce2">
+      </div>
+      <div class="row">
+        <div class="col">
+          <img src="img/beyonce3.jpg" alt="beyonce3">
+          <img src="img/beyonce4.jpg" alt="beyonce4">
+        </div>
+        <div class="col">
+          <img src="img/beyonce5.jpg" alt="beyonce5">
+          <img src="img/beyonce6.jpg" alt="beyonce6">
+        </div>
+        <div class="col">
+          <img src="img/beyonce7.jpg" alt="beyonce7">
+        </div>
+      </div>
+    </article>
+  </section>
+</body>
+</html>

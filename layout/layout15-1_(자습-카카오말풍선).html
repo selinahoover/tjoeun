@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+<style>
+  *{margin: 0; padding: 0; }
+  body{width: 1200px; margin: 0 auto; font-family:'Nanum Gothic', sans-serif;}
+  header{
+    background: #ffd300; height: 120px;
+    background-image: url(img/kakaofriends-logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  section{
+    width: 960px;
+    margin: 100px auto;
+  }
+  .ryan, .apeach, .tube, .frodo{
+    position: relative;
+    height: 300px;
+    margin-bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .ryan img, .apeach img, .tube img, .frodo img {
+    width: 280px;
+    height: 260px;
+    position: relative;
+    display: inline-block;
+  }
+  .apeach img, .frodo img{
+    /* position: absolute; */
+    float: right;
+    /* margin-left: 700px; */
+  }
+  .ryan_box, .apeach_box, .tube_box, .frodo_box {
+    position: absolute;
+    display: inline-block;
+    width: 630px; height: 260px;
+  }
+  .ryan_box{
+    margin-left: 50px;
+    border-radius: 20px;
+    border: 5px solid #39516d;
+    box-sizing: border-box;
+  }
+  .apeach_box{
+    margin-right: 50px;
+    border-radius: 20px;
+    border: 5px solid #fec6c7;
+    box-sizing: border-box;
+  }
+  .tube_box{
+    margin-left: 50px;
+    border-radius: 20px;
+    border: 5px solid #94ccd9;
+    box-sizing: border-box;
+  }
+  .frodo_box{
+    margin-right: 50px;
+    border-radius: 20px;
+    border: 5px solid #a98342;
+    box-sizing: border-box;
+  }
+  .ryan_box img, .tube_box img{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    margin-left: -20px;
+    margin-top: 120px;
+  }
+  .apeach_box img, .frodo_box img{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    margin-left: 100%;
+    margin-top: 120px;
+  }
+  dt{
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+  dt b {
+    font-size: 30px;
+  }
+  #R{color: #39516d;}
+  #A{color: #fec6c7;}
+  #T{color: #94ccd9;}
+  #F{color: #a98342;}
+  dt span {
+    font-size: 20px;
+  }
+  dd{
+    text-align: left;
+    margin-top:50px;
+    margin-left: 50px;
+    font-size: 20px;
+  }
+
+</style>
+
+</head>
+<body>
+  <header>
+   <div class="logo">
+     <h1></h1>
+   </div>
+  </header>
+  <section class="kakao">
+     <div class="ryan">
+       <img src="img/friends_ryan copy.jpg" alt="">
+       <div class="ryan_box">
+         <img src="img/arrow1.png" alt="">
+         <dt id="R">
+           <b>라이언</b><br>
+           <span>Ryan</span>
+         </dt>
+         <dd>위로의 아이콘, 믿음직스러운 조언자</dd>
+       </div>
+     </div>
+     <div class="apeach">
+       <img src="img/friends_apeach copy.jpg" alt="">
+       <div class="apeach_box">
+         <img src="img/arrow2.png" alt="">
+         <dt id="A">
+           <b>어피치</b><br>
+           <span>Apeach</span>
+         </dt>
+         <dd>뒤태가 매력적인 애교만점 어피치</dd>
+       </div>
+     </div>
+     <div class="tube">
+       <img src="img/friends_tube copy.jpg" alt="">
+       <div class="tube_box">
+         <img src="img/arrow3.png" alt="">
+         <dt id="T">
+           <b>튜브</b><br>
+           <span>Tube</span>
+         </dt>
+         <dd>화나면 미친 오리로 변신하는 튜브</dd>
+       </div>
+     </div>
+     <div class="frodo">
+       <img src="img/friends_frodo copy.jpg" alt="">
+       <div class="frodo_box">
+         <img src="img/arrow4.png" alt="">
+         <dt id="F">
+           <b>프로도</b><br>
+           <span>Frodo</span>
+         </dt>
+         <dd>부자집 도시개 프로도</dd>
+       </div>
+     </div>
+
+  </section>
+</body>
+</html>

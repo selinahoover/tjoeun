@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- 웹폰트의 굵기는 옵션값을 체크해서 가져와야 적용된다. -->
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <style>
+    *{margin: 0; padding: 0;}
+    body{font-family: 'Nanum Gothic', sans-serif;}
+    .center{position: relative; width: 960px; margin: 0 auto;}
+    button{border: 0; background: none;}
+
+    header{background: #000; height: 100px; text-align: center;}
+    header .center{width: 1200px;}
+    header h1{padding-top: 20px;}
+    header .btn-menu{position: absolute; left:30px; top:35px;}
+    header .btn-search{position: absolute; right:30px; top:35px;}
+    header i{color:#fff; font-size: 30px;}
+
+    section.center{margin: 100px auto;}
+    /* 가상선택자로 클리어 처리 */
+    article .row::after{content: ''; display: block; clear: both; overflow: hidden;}
+    article .row img{float: left; padding-right: 30px;}
+    article .row .text h2{font-size: 26px;}
+    article .row .text p{font-size: 15px; line-height: 25px; text-align: justify; padding-top: 25px;}
+    article dl{padding: 30px 0 50px;}
+    article dl dt{font-size: 25px; font-weight: 800;}
+    article dl dd{font-size: 16px; line-height: 25px;}
+
+    .gallery img{float: left; width: 300px; margin-right: 30px;}
+    .gallery img:last-child{margin-right: 0;}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="center">
+      <h1><img src="img/beyonce-logo.jpg" alt="beyonce"></h1>
+      <button class="btn-menu"><i class="fas fa-bars"></i><span class="skip">메뉴</span></button>
+      <button class="btn-search"><i class="fas fa-search"></i><span class="skip">검색</span></button>
+    </div>
+  </header>
+  <section class="center">
+    <article>
+      <div class="row">
+        <img src="img/worldwater1.jpg" alt="">
+        <div class="text">
+          <h2>WORLD WATER DAY: BG4B UPDATE</h2>
+          <p>Today we celebrate World Water Day, with an announcement from our friends at Gucci and CHIME FOR CHANGE as well as a progress update from our last trip – the first 35 wells have now been completed! Through BeyGOOD, Beyoncé launched BEYGOO4BURUNDI with UNICEF USA in 2017 to support programs to improve water, sanitation and basic hygiene practices in the hardest-to-reach areas of Burundi, where nearly half the population had no access to safe water.</p>
+          <p>We're excited to share that Gucci and CHIME FOR CHANGE have officially partnered with BEYGOOD4BURUNDI. Gucci's $1M commitment to the initiative as a founding partner will help support the building of 80 additional wells, providing access to clean, safe water to more than 120,000 women, girls, and their families.</p>
+          <p>Learn more about Burundi and our progress to date below.</p>
+        </div>
+      </div>
+      <dl>
+        <dt>BURUNDI AT A GLANCE</dt>
+        <dd>Provinces: 18</dd>
+        <dd>Poverty: 8 out of 10 people live on less than $1.25 a day</dd>
+        <dd>Pop: 11.5 Million -49% under 18 years old</dd>
+        <dd>Women: 51%</dd>
+        <dd>Cause of death in children under 5: Endemic water-born diseases</dd>
+        <dd>Water access: 24.5% use unsafe sources for water</dd>
+        <dd>Life expectancy: 43 years</dd>
+      </dl>
+      <div class="gallery">
+        <img src="img/worldwater2.jpg" alt="">
+        <img src="img/worldwater3.jpg" alt="">
+        <img src="img/worldwater4.jpg" alt="">
+      </div>
+    </article>
+  </section>
+</body>
+</html>

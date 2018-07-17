@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <style>
+    *{margin: 0; padding: 0;}
+    .skip{font-size: 0; text-indent: -9999px; position: absolute; left:-9999px;}
+    .center{position: relative; width: 960px; margin: 0 auto;}
+    button{border: 0; background: none;}
+
+    header{background: #000; height: 100px; text-align: center; margin-bottom: 100px;}
+    header .center{width: 1200px;}
+    header h1{padding-top: 20px;}
+    header .btn-menu{position: absolute; left:30px; top:35px;}
+    header .btn-search{position: absolute; right:30px; top:35px;}
+    header i{color:#fff; font-size: 30px;}
+
+    .row{margin-bottom: 40px; border-top:1px solid #000; border-bottom:1px solid #000; box-sizing: border-box;}
+    .row::after{content: ''; display: block; clear: both; overflow: hidden;}
+    .left{float: left; width: 460px; height: 340px;}
+    .right{float: right; width: 460px; height: 340px;}
+    .video{position: relative;}
+    .video button{
+      position: absolute; top:50%; left:50%; transform: translate(-50%, -50%);
+      width: 100px; height: 100px;
+      /* 파일명은 대소문자에 주의할것(확장자포함) */
+      background: url(img/btn-play.PNG);
+      cursor: pointer;
+    }
+    /* 부모영역에 맞춰 크기를 늘리고 남는 영역은 배경색으로 처리 */
+    video{width: 100%; height: 100%; background: #000;}
+
+    .box{text-align: center;}
+    .box .title{padding-top: 110px;}
+    .box .title, .box .time{font-size: 25px;}
+    .box button{width: 140px; height: 50px; margin-top: 20px; font-size: 20px;
+      font-weight: bold; background: #000; color:#fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="center">
+      <h1><img src="img/beyonce-logo.jpg" alt="beyonce"></h1>
+      <button class="btn-menu"><i class="fas fa-bars"></i><span class="skip">메뉴</span></button>
+      <button class="btn-search"><i class="fas fa-search"></i><span class="skip">검색</span></button>
+    </div>
+  </header>
+  <section class="center">
+    <article>
+      <div class="row">
+        <div class="video left">
+          <video>
+            <source src="LEMONADE_Trailer_HBO.mp4" type="video/mp4">
+          </video>
+          <button class="play"><span class="skip">play</span></button>
+        </div>
+        <div class="box right">
+          <div class="title">LEMONADE TRAILER</div>
+          <div class="time">1:05</div>
+          <button>BUY VIDEO</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="video right">
+          <video>
+            <source src="LEMONADE_Trailer_HBO.mp4" type="video/mp4">
+          </video>
+          <button class="play"><span class="skip">play</span></button>
+        </div>
+        <div class="box left">
+          <div class="title">LEMONADE TRAILER</div>
+          <div class="time">1:05</div>
+          <button>BUY VIDEO</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="video left">
+          <video>
+            <source src="LEMONADE_Trailer_HBO.mp4" type="video/mp4">
+          </video>
+          <button class="play"><span class="skip">play</span></button>
+        </div>
+        <div class="box right">
+          <div class="title">LEMONADE TRAILER</div>
+          <div class="time">1:05</div>
+          <button>BUY VIDEO</button>
+        </div>
+      </div>
+    </article>
+  </section>
+</body>
+</html>

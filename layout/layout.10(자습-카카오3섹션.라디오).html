@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+  <style>
+    *{margin: 0; padding: 0; transition: all 1s;}
+    body{width: 960px; margin: 0 auto; font-family:'Nanum Gothic', sans-serif;}
+    label{vertical-align: middle; cursor: pointer;}
+    header{
+      background: #ffd300; height: 120px;
+      background-image: url(img/kakaofriends-logo.png);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    section{
+      width: 100%;
+      height: 1100px;
+      position: relative;
+      display: inline-block;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 100px;
+    }
+    section.kakao div{
+      float: left;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+    img {
+      width: 100%;
+    }
+    .apeach {
+      width: 320px; height: 1000px;
+      background: #fec6c8;
+    }
+    .apeach img{
+      position: relative;
+      top: 350px;
+      left: 50px;
+    }
+    .ryan{
+      width: 320px; height: 1000px;
+      background: #39516e;
+    }
+    .ryan img{
+      position: relative;
+      top: 300px;
+      left: 50px;
+    }
+    .tube{
+      width: 320px; height: 1000px;
+      background: #d0d0d0;
+    }
+    .tube img{
+      position: relative;
+      top: 350px;
+      left: 50px;
+    }
+    /* .apeach, .ryan, .tube{
+      transform: scale(1.1);
+    } */
+    p,span {text-align: center; color: #fff; line-height: 40px;}
+    p { margin-top: 100px; font-size: 30px; font-weight: bold;}
+    span {display: block; font-size: 20px;}
+
+    input[type=radio]{
+      display: none;
+    }
+    input[type=radio]:checked + div{
+      transform: scale(1.1);
+      box-shadow: 5px 5px 100px rgba(0, 0, 0, 0.5);
+    }
+
+  </style>
+</head>
+<body>
+   <header>
+    <div class="logo">
+      <h1></h1>
+    </div>
+   </header>
+
+  <section class="kakao">
+
+    <label class="ac">
+      <input type="radio" name="radio">
+      <div class="apeach">
+        <p>어피치</p>
+        <span>Apeach</span>
+        <img src="img/어피치.png" alt="">
+      </div>
+      </label>
+
+    <label class="ac">
+      <input type="radio" name="radio">
+      <div class=ryan>
+        <p>라이언</p>
+        <span>Ryan</span>
+        <img src="img/라이언.png" alt="">
+      </div>
+    </label>
+
+    <label class="ac">
+      <input type="radio" name="radio">
+      <div class="tube">
+        <p>튜브</p>
+        <span>Tube</span>
+        <img src="img/튜브.png" alt="">
+      </div>
+    </label>
+  </section>
+</body>
+</html>

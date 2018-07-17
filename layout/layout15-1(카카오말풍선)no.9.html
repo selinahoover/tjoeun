@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+  <style>
+    *{margin: 0; padding: 0;}
+    .skip{font-size: 0; text-indent: -9999px; position: absolute; left:-9999px;}
+    .center{position: relative; width: 960px; margin: 0 auto;}
+    body{font-family: 'Nanum Gothic', sans-serif;}
+
+    header{height: 120px; background: #ffd300; bottom:100px; text-align: center;
+      margin-bottom: 100px;
+    }
+    header h1{
+      display: inline-block; width: 300px; height: 30px;
+      margin-top: 45px;
+      background: url(img/kakaofriends-logo.png) no-repeat center;
+    }
+
+    .row{margin-bottom: 20px;}
+    .row::after{content: ''; display: block; clear: both; overflow: hidden;}
+    .left{float: left;}
+    .right{float: right;}
+
+    /* 이미지박스 */
+    .friends .img-box{width: 280px; height: 260px; background-repeat: no-repeat; background-position: right bottom;}
+    .friends .ryan .img-box{background-image: url(img/friends_ryan.jpg);}
+    .friends .apeach .img-box{background-image: url(img/friends_apeach.jpg);}
+    .friends .tube .img-box{background-image: url(img/friends_tube.jpg);}
+    .friends .frodo .img-box{background-image: url(img/friends_frodo.jpg);}
+
+    /* 말풍선 */
+    .friends .balloon{position: relative; width: 630px; height: 260px; background: #fff;
+      border-radius: 15px; padding: 30px 40px; box-sizing: border-box;
+    }
+    .friends .ryan .balloon{border:5px solid #39516e;}
+    .friends .apeach .balloon{border:5px solid #fec6c7;}
+    .friends .tube .balloon{border:5px solid #94ccd9;}
+    .friends .frodo .balloon{border:5px solid #a98342;}
+    .friends .balloon dl{font-weight: bold;}
+    .friends .balloon dl dt{padding-bottom: 20px;}
+    .friends .ryan dl dt{color:#39516e;}
+    .friends .apeach dl dt{color:#fec6c7;}
+    .friends .tube dl dt{color:#94ccd9;}
+    .friends .frodo dl dt{color:#a98342;}
+    .friends .balloon dl dt b{display: block; font-size: 46px;}
+    .friends .balloon dl dt span{font-size: 24px; opacity: 0.8;}
+    .friends .balloon dl dd{font-size: 24px; color:#808080;}
+    /* 화살표 */
+    .friends .balloon::after{
+      content: ''; position: absolute; top:50%; transform: translateY(-50%);
+      width: 26px; height: 26px; background-repeat: no-repeat;
+    }
+    .friends .ryan .balloon::after{background-image: url(img/arrow1.png); left:-25px;}
+    .friends .apeach .balloon::after{background-image: url(img/arrow2.png); right:-25px;}
+    .friends .tube .balloon::after{background-image: url(img/arrow3.png); left:-25px;}
+    .friends .frodo .balloon::after{background-image: url(img/arrow4.png); right:-25px;}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1><span class="skip">kakao friends</span></h1>
+  </header>
+  <section class="center">
+    <article class="friends">
+      <div class="row ryan">
+        <div class="img-box left"></div>
+        <div class="balloon right">
+          <dl>
+            <dt><b>라이언</b><span>Ryan</span></dt>
+            <dd>위로의 아이콘, 믿음직스러운 조언자 </dd>
+          </dl>
+        </div>
+      </div>
+      <div class="row apeach">
+        <div class="img-box right"></div>
+        <div class="balloon left">
+          <dl>
+            <dt><b>어피치</b><span>Apeach</span></dt>
+            <dd>뒤태가 매력적인 애교만점 어피치</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="row tube">
+        <div class="img-box left"></div>
+        <div class="balloon right">
+          <dl>
+            <dt><b>튜브</b><span>Tube</span></dt>
+            <dd>화나면 미친 오리로 변신하는 튜브</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="row frodo">
+        <div class="img-box right"></div>
+        <div class="balloon left">
+          <dl>
+            <dt><b>프로도</b><span>Frodo</span></dt>
+            <dd>부자집 도시개 프로도</dd>
+          </dl>
+        </div>
+      </div>
+    </article>
+  </section>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <style>
+    *{margin: 0; padding: 0;}
+    body{font-family: 'Nanum Gothic', sans-serif;}
+    .center{position: relative; width: 960px; margin: 0 auto;}
+    button{border: 0; background: none;}
+    .skip{font-size: 0; text-indent: -9999px; position: absolute; left:-9999px;}
+    li{list-style: none;}
+    img{width: 100%;}
+
+    header.center{height: 180px; text-align: center; margin: 0 auto 20px;}
+    header h1{padding-top: 50px; font-size: 48px; font-weight: normal;}
+    header i{font-size: 30px; vertical-align: middle;}
+    header .time{position: absolute; left:0; bottom:0;}
+    header .time i{float: left; margin-right: 10px;}
+    header .time span{font-size: 30px; line-height: 30px; vertical-align: middle;}
+    header button{position: absolute; right: 0; bottom:0; font-size: 30px;}
+
+    .card-list{margin: 0 -10px;}
+    .card-list::after{content: ''; display: block; clear: both; overflow: hidden;}
+    .card-list li{float: left; width: 25%; text-align: center; margin-bottom: 20px;}
+    .card-list li .card{
+      display: inline-block; position: relative; width: 220px; height: 260px;
+    }
+    .card-list li .card > *{
+      position: absolute; width: 100%; height: 100%;
+      border: 5px solid #808080; border-radius: 15px; box-sizing: border-box;
+      overflow: hidden; transition: all 0.5s;
+      /* 뒤집기할 때 필수적으로 들어가는 속성(매우중요) */
+      backface-visibility: hidden;
+    }
+    .card-list li .card .front{transform: rotateY(180deg);}
+    .card-list li .card .back{
+      transform: rotateY(0deg);
+      background: url(img/card-back.jpg) no-repeat;
+    }
+    /* 마우스를 올리거나 짝이 맞춰진 상태일때 */
+    .card-list li .card:hover .front,
+    .card-list li .card.active .front{transform: rotateY(0deg);}
+    .card-list li .card:hover .back,
+    .card-list li .card.active .back{transform: rotateY(180deg);}
+  </style>
+</head>
+<body>
+  <header class="center">
+    <h1>Card Matching Game</h1>
+    <div class="state">
+      <div class="time">
+        <i class="far fa-clock"></i>
+        <span>00:10</span>
+      </div>
+      <button class="fas fa-redo-alt">
+        <span class="skip">다시시작</span>
+      </button>
+    </div>
+  </header>
+
+  <section class="center">
+    <article class="card-list">
+      <!-- 짝맞추기 게임이므로 카드가 2개씩 랜덤으로 배치되어야함.
+        카드는 앞면과 뒷면이 각각 있다.
+        기본적으로 보이는 카드는 뒷면이다.
+        짝을 맞추면 앞면이 보이게 처리해주어야한다.
+      -->
+      <!-- ul>li>div[class=card]>(div[class=front]>img[src=img/card.jpg])+div[class=back] -->
+      <ul>
+        <li>
+          <div class="card card1 active">
+            <div class="front"><img src="img/card1.jpg" alt="card1"></div>
+            <div class="back"></div>
+          </div>
+        </li>
+        <li>
+          <div class="card card5">
+            <div class="front"><img src="img/card5.jpg" alt="card5"></div>
+            <div class="back"></div>
+          </div>
+        </li>
+        <li>
+          <div class="card card5">
+            <div class="front"><img src="img/card5.jpg" alt="card5"></div>
+            <div class="back"></div>
+          </div>
+        </li>
+        <li>
+          <div class="card card3">
+            <div class="front"><img src="img/card3.jpg" alt="card3"></div>
+            <div class="back"></div>
+          </div>
+        </li>
+        <li>
+          <div class="card card4">
+            <div class="front"><img src="img/card4.jpg" alt="card4"></div>
+            <div class="back"></div>
+          </div>
+        </li>
+        <li>
+          <div class="card card3">
+            <div class="front"><img src="img/card3.jpg" alt="card3"></div>
+            <div class="back"></div>
+          </div>
+        </li>
+        <li>
+          <div class="card card2">
+            <div class="front"><img src="img/card2.jpg" alt="card2"></div>
+            <div class="back"></div>
+          </div>
+        </li>
+        <li>
+          <div class="card card2">
+            <div class="front"><img src="img/card2.jpg" alt="card2"></div>
+            <div class="back"></div>
+          </div>
+        </li>
+        <li>
+          <div class="card card5">
+            <div class="front"><img src="img/card5.jpg" alt="card5"></div>
+            <div class="back"></div>
+          </div>
+        </li>
+        <li>
+          <div class="card card1 active">
+            <div class="front"><img src="img/card1.jpg" alt="card1"></div>
+            <div class="back"></div>
+          </div>
+        </li>
+        <li>
+          <div class="card card4">
+            <div class="front"><img src="img/card4.jpg" alt="card4"></div>
+            <div class="back"></div>
+          </div>
+        </li>
+        <li>
+          <div class="card card6">
+            <div class="front"><img src="img/card6.jpg" alt="card6"></div>
+            <div class="back"></div>
+          </div>
+        </li>
+        <li>
+          <div class="card card5">
+            <div class="front"><img src="img/card5.jpg" alt="card5"></div>
+            <div class="back"></div>
+          </div>
+        </li>
+        <li>
+          <div class="card card8">
+            <div class="front"><img src="img/card8.jpg" alt="card8"></div>
+            <div class="back"></div>
+          </div>
+        </li>
+        <li>
+          <div class="card card8">
+            <div class="front"><img src="img/card8.jpg" alt="card8"></div>
+            <div class="back"></div>
+          </div>
+        </li>
+        <li>
+          <div class="card card6">
+            <div class="front"><img src="img/card6.jpg" alt="card6"></div>
+            <div class="back"></div>
+          </div>
+        </li>
+      </ul>
+    </article>
+  </section>
+
+
+
+
+</body>
+</html>
